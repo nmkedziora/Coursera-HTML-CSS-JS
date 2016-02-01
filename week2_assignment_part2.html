@@ -7,25 +7,26 @@
 <body onload="playGame()">
 
 	<script type="text/javascript">
-		var targetColor;
-		var colors = [
-			"blue",
-			"cyan",
-			"gold",
-			"gray",
-			"green",
-			"magenta",
-			"orange",
-			"red",
-			"white",
-			"yellow"
-		];
-		var guessColor;
-		var finished = false;
-		var guesses = 0;
+		var targetColor,
+			guessColor,
+			finished = false,
+			guesses = 0,
+			colors = [
+				"white",
+				"blue",
+				"cyan",
+				"gold",
+				"gray",
+				"green",
+				"magenta",
+				"orange",
+				"red",
+				"yellow"
+			];
 
 		function playGame() {
 			var targetIndex = Math.floor(Math.random() * colors.length);
+			colors = colors.sort();
 			targetColor = colors[targetIndex];
 			console.log("Target color is: " + targetColor);
 
